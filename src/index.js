@@ -51,9 +51,9 @@ client.on('interactionCreate', async (interaction) => {
     if (commandName === 'ark') {
         let status_fetch = await fetch(`https://api.nitrado.net/services/${process.env.service_id}/gameservers`, { headers: { 'Authorization': `Bearer ${process.env.ACCESS_TOKEN}` } });
         let status_data = await status_fetch.json()
-        let status = (status_data?.data.gameserver.status) ? status_data?.data.gameserver.status : 'unknown'
+        let status = (status_data.data?.gameserver?.status) ? status_data.data.gameserver.status : 'unknown'
 
-        let out = `Status fetch request: ${status_data.status}\nServer status: ${status}\n`
+        let out = `Status fetch request: ${status_data.status}\nServer status: ${status}\nPlayers online: ${status_data.data?.gameserver?.query?.player_current}`
         
         if (options.getString('action') != 'status' && status_data.status == 'success') {
             out += `Attempting to ${options.getString('action')} the gameserver ...\n`
