@@ -26,7 +26,7 @@ client.on('messageCreate', async message => {
         let commands
 
         if (TEST_GUILD) commands = TEST_GUILD.commands
-        else commands = client.application.commands
+        else commands = client.application?.commands
 
         commands?.set([
             {
