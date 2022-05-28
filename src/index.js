@@ -22,7 +22,7 @@ client.on('messageCreate', async message => {
     if (!content.startsWith(process.env.prefix)) return
     const command = `${process.env.prefix}register`
     if (content.toLowerCase().startsWith(`${command} `) || content.toLowerCase() === command) {
-        const TEST_GUILD = client.guilds.cache.get('338754004869971968')
+        const TEST_GUILD = client.guilds.cache.get('903462757377142785')
         let commands
 
         if (TEST_GUILD) commands = TEST_GUILD.commands
