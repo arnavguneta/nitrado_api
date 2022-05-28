@@ -1,0 +1,40 @@
+{
+  "name": "wordle",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "env-cmd nodemon src/index.js -e js "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "discord.js": "^13.6.0",
+    "discord.js-pagination": "^1.0.3",
+    "module-alias": "^2.2.2",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnavguneta/nitrado_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arnavguneta/nitrado_api/issues"
+  },
+  "homepage": "https://github.com/arnavguneta/nitrado_api#readme",
+  "description": "",
+  "_moduleAliases": {
+    "@root": "./src",
+    "@models": "./src/models",
+    "@utils": "./src/utils",
+    "@features": "./src/features/features",
+    "@commands": "./src/commands/commands",
+    "@db": "./src/db",
+    "@api": "./src/api"
+  }
+}
